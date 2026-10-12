@@ -1,0 +1,126 @@
+/* Student Agency storyboard — edit page styling here. */
+
+body {
+  font:16px/1.5 Arial,sans-serif;
+  color:#242424;
+  background:#f5f1e9;
+  margin:0
+}
+
+header,main {
+  max-width:1160px;
+  margin:auto;
+  padding:28px
+}
+
+h1 {
+  color:#50131a;
+  font-size:34px
+}
+
+h2 {
+  color:#50131a;
+  margin-top:0
+}
+
+header p {
+  max-width:950px
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px
+}
+
+article {
+  background:white;
+  padding:22px;
+  border-top:5px solid #50131a;
+  border-radius:8px;
+  break-inside:avoid
+}
+
+img {
+  width:100%
+}
+
+.caption {
+  font-size:12px;
+  color:#666;
+  margin-top:3px
+}
+
+.script {
+  background:#f5f1e9;
+  padding:14px
+}
+
+b {
+  color:#50131a
+}
+
+@media(max-width:800px) {
+  .grid {
+    grid-template-columns:1fr
+  }
+
+}
+
+@media print {
+  body {
+    background:white
+  }
+
+  header,main {
+    padding:12px
+  }
+
+  article {
+    border:1px solid #aaa;
+    font-size:12px
+  }
+
+  h1 {
+    font-size:25px
+  }
+
+}
+
+/* REVIEW TOOLS */
+.review-toolbar {max-width:1104px;margin:0 auto 12px;padding:20px;background:#fff;border:1px solid #d5c7bb;border-radius:8px}
+.review-toolbar h2 {margin-bottom:8px}
+button,select,input,textarea {font:inherit}
+button {background:#50131a;color:white;border:0;border-radius:5px;padding:9px 13px;cursor:pointer;margin:4px 4px 4px 0}
+button.secondary {background:#eee7dc;color:#50131a}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible {outline:3px solid #b88126;outline-offset:2px}
+.review-panel {border-top:1px solid #d5c7bb;margin-top:20px;padding-top:14px}
+.review-panel label {display:block;margin:8px 0 4px;font-weight:bold}
+textarea {width:100%;box-sizing:border-box;min-height:110px;padding:10px;border:1px solid #a9988a;border-radius:4px;resize:vertical}
+select,input {max-width:100%;box-sizing:border-box;padding:8px;border:1px solid #a9988a;border-radius:4px}
+mark {background:#ffe68a;color:inherit}
+.highlight-list {padding-left:20px}
+.highlight-list li {margin:10px 0;overflow-wrap:anywhere}
+.highlight-list button {font-size:13px;padding:3px 7px}
+.review-help,#review-message {font-size:14px}
+@media print { .review-toolbar,.review-panel button {display:none} textarea {display:none} .print-comment {white-space:pre-wrap} select {appearance:none;border:0} }
+@media screen {.print-comment {display:none}}
+
+/* ASSIGNMENT REFERENCE: supplied original assignment context */
+.assignment-context {
+  max-width: 1104px;
+  margin: 0 auto 24px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #d5c7bb;
+  border-radius: 8px;
+}
+.assignment-context summary { cursor: pointer; font-size: 20px; font-weight: bold; color: #50131a; }
+.comparison-scroll { overflow-x: auto; }
+.assignment-context table { border-collapse: collapse; width: 100%; margin-top: 18px; }
+.assignment-context th, .assignment-context td { padding: 12px; text-align: left; vertical-align: top; border: 1px solid #d5c7bb; }
+.assignment-context th { background: #f5f1e9; }
+.assignment-context li { margin: 8px 0; }
+@media (max-width: 800px) {
+  .review-toolbar, .assignment-context { margin-left: 12px; margin-right: 12px; padding: 16px; }
+}

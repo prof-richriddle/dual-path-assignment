@@ -1,4 +1,3 @@
-
 <!doctype html>
 
 <html>
@@ -13,95 +12,8 @@
     </title>
 
     <!-- PAGE APPEARANCE: colors, spacing, and responsive layout -->
-    <style>
-      body {
-        font:16px/1.5 Arial,sans-serif;
-        color:#242424;
-        background:#f5f1e9;
-        margin:0
-      }
+    <link rel="stylesheet" href="styles.css">
 
-      header,main {
-        max-width:1160px;
-        margin:auto;
-        padding:28px
-      }
-
-      h1 {
-        color:#50131a;
-        font-size:34px
-      }
-
-      h2 {
-        color:#50131a;
-        margin-top:0
-      }
-
-      header p {
-        max-width:950px
-      }
-
-      .grid {
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:24px
-      }
-
-      article {
-        background:white;
-        padding:22px;
-        border-top:5px solid #50131a;
-        border-radius:8px;
-        break-inside:avoid
-      }
-
-      img {
-        width:100%
-      }
-
-      .caption {
-        font-size:12px;
-        color:#666;
-        margin-top:3px
-      }
-
-      .script {
-        background:#f5f1e9;
-        padding:14px
-      }
-
-      b {
-        color:#50131a
-      }
-
-      @media(max-width:800px) {
-        .grid {
-          grid-template-columns:1fr
-        }
-
-      }
-
-      @media print {
-        body {
-          background:white
-        }
-
-        header,main {
-          padding:12px
-        }
-
-        article {
-          border:1px solid #aaa;
-          font-size:12px
-        }
-
-        h1 {
-          font-size:25px
-        }
-
-      }
-
-    </style>
   </head>
 
 
@@ -141,6 +53,79 @@
     </header>
 
 
+    <!-- JMS REVIEW TOOLS: feedback saves in this browser; download to share -->
+    <section class="review-toolbar" aria-label="Review tools">
+      <h2>JMS review tools</h2>
+      <p>Select text within a paragraph, then click that segment’s <b>Highlight selected text</b> button. Add comments and choose a review status below each segment.</p>
+      <label for="reviewer">Reviewer name</label>
+      <input id="reviewer" value="JMS" autocomplete="name">
+      <div>
+        <button id="download-notes">Download feedback</button>
+        <button id="download-backup" class="secondary">Save editable review</button>
+        <button id="load-backup" class="secondary">Open saved review</button>
+        <button id="print-review" class="secondary">Print / save PDF</button>
+        <input type="file" id="import-review" accept="application/json,.json" hidden>
+      </div>
+      <p class="review-help">Your notes save on this browser and device. Rich won’t see them automatically. Use Download feedback to send your notes to Rich, or Save editable review to continue on another device.</p>
+      <p id="review-message" role="status" aria-live="polite">Ready for review.</p>
+    </section>
+
+    <!-- ORIGINAL ASSIGNMENT CONTEXT: reference material for JMS -->
+    <details class="assignment-context">
+      <summary>Original assignment context: paths, benefits, and course outcomes</summary>
+      <p>This reference summarizes the original CP2 assignments supplied by Rich. The learning benefits below explain the assignment design; they are not claims of measured results. The storyboard narration remains proposed wording.</p>
+
+      <div class="comparison-scroll">
+        <table>
+          <caption>What each path offers and requires</caption>
+          <thead>
+            <tr>
+              <th scope="col">Focus</th>
+              <th scope="col">Guided AI path</th>
+              <th scope="col">Non-AI research path</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Student benefit</th>
+              <td>Generate starting possibilities, then practice deciding whether they are real, accurate, and useful to the inquiry. The student chooses the community and evaluates the candidates.</td>
+              <td>Learn where the community’s conversations happen and how to enter them. Begin broadly, follow sources, notice patterns, and narrow the search through reading.</td>
+            </tr>
+            <tr>
+              <th scope="row">Each of 10–15 terms includes</th>
+              <td>The term, a definition in the student’s own words, the AI tool that suggested it, and the non-AI source used to verify it.</td>
+              <td>The term, a definition in the student’s own words, and the source where the term was found being used.</td>
+            </tr>
+            <tr>
+              <th scope="row">Evidence rule</th>
+              <td>Every term requires independent verification. Another AI answer does not count. Replace unsupported terms. Students must not ask AI to rewrite definitions.</td>
+              <td>No separate verification source is required: finding the term in authentic community discourse is already evidence. Students still identify that source and explain the meaning themselves.</td>
+            </tr>
+            <tr>
+              <th scope="row">Shared learning</th>
+              <td colspan="2">Identify a specific, defensible discourse community; select useful specialized vocabulary; understand and explain its meaning; document the research; and refine the research question. Terms must help the inquiry rather than merely relate to the topic.</td>
+            </tr>
+            <tr>
+              <th scope="row">Instructor benefit</th>
+              <td colspan="2">The common deliverables and five-point rubric provide comparable evidence of learning across both routes, while path-specific documentation makes the research process visible.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Connection to ENG 1320 outcomes</h3>
+      <ul>
+        <li><b>SLO 1 / Communication:</b> Recognize and explain a community’s specialized language through vocabulary and definitions.</li>
+        <li><b>SLO 2 / Critical thinking:</b> Investigate the community, evaluate evidence, and refine an inquiry.</li>
+        <li><b>SLO 3 / Communication:</b> Interpret terminology and accurately express its meaning in the student’s own language.</li>
+        <li><b>SLO 4 / Personal responsibility:</b> Distinguish verified research from generated suggestions and document where information came from.</li>
+      </ul>
+
+      <h3>Shared submission and clarity</h3>
+      <p>Both paths earn the same five points and require a community paragraph, 10–15 documented terms, and an updated question, submitted as a PDF. Students may identify a changed topic or artifact at the beginning. The updated question should reflect new understanding; it does not need added jargon.</p>
+      <p><b>Concise explanation for the video:</b> AI helps students find possibilities to test. Non-AI research helps students discover the conversation directly. Both require students to judge usefulness, explain meaning, document evidence, and improve their question.</p>
+    </details>
+
     <!-- STORYBOARD: each article below is one timestamped segment -->
     <main class="grid">
 
@@ -151,7 +136,7 @@
         <h2>
           01 · 00:00–00:15
         </h2>
-        <img src="assets/frame-000.jpg" alt="Current video reference">
+        <img src="images/frame-000.jpg" alt="Current video reference">
         <p class="caption">
           Current video reference · 00:00
         </p>
@@ -198,7 +183,7 @@
         <h2>
           02 · 00:15–00:30
         </h2>
-        <img src="assets/frame-025.jpg" alt="Current video reference">
+        <img src="images/frame-025.jpg" alt="Current video reference">
         <p class="caption">
           Current video reference · 00:25
         </p>
@@ -245,7 +230,7 @@
         <h2>
           03 · 00:30–00:45
         </h2>
-        <img src="assets/frame-035.jpg" alt="Current video reference">
+        <img src="images/frame-035.jpg" alt="Current video reference">
         <p class="caption">
           Current video reference · 00:35
         </p>
@@ -263,7 +248,7 @@
             Proposed visual
           </b>
           <br>
-          Replace the second scenic graphic with two brief benefit cards.
+          Show two benefit cards: AI — evaluate possibilities; Non-AI — discover the conversation.
         </p>
 
         <p class="script">
@@ -271,7 +256,7 @@
             Proposed narration
           </b>
           <br>
-          The AI route gives students starting possibilities to test. The non-AI route builds discovery through direct reading. Each develops research judgment, with a different starting process.
+          The AI path offers possibilities to evaluate. The non-AI path teaches students where a community’s conversations happen and how to enter them. Both keep the student responsible for the research.
         </p>
 
         <p>
@@ -279,7 +264,7 @@
             Revision purpose
           </b>
           <br>
-          Answer why either path is worth choosing before the walkthrough.
+          State an advantage of each path before explaining the steps.
         </p>
 
       </article>
@@ -292,7 +277,7 @@
         <h2>
           04 · 00:45–01:00
         </h2>
-        <img src="assets/frame-050.jpg" alt="Current video reference">
+        <img src="images/frame-050.jpg" alt="Current video reference">
         <p class="caption">
           Current video reference · 00:50
         </p>
@@ -310,7 +295,7 @@
             Proposed visual
           </b>
           <br>
-          Zoom into Choose Your Path; highlight Guided AI. Add: Generate → Check → Decide.
+          Zoom into Guided AI. Add: Generate possibilities → Make a choice.
         </p>
 
         <p class="script">
@@ -318,7 +303,7 @@
             Proposed narration
           </b>
           <br>
-          On the AI path, students can explore possible communities and terms before they know what to search for. The benefit is a starting point for inquiry.
+          On the AI path, students give the tool their topic, artifact, and question. Its suggestions offer starting points when the community or its language is unfamiliar. Students make the final choice.
         </p>
 
         <p>
@@ -326,7 +311,7 @@
             Revision purpose
           </b>
           <br>
-          Explain the student benefit without promising better or faster results.
+          Explain how AI can help students begin while keeping decisions with the student.
         </p>
 
       </article>
@@ -339,7 +324,7 @@
         <h2>
           05 · 01:00–01:15
         </h2>
-        <img src="assets/frame-065.jpg" alt="Current video reference">
+        <img src="images/frame-065.jpg" alt="Current video reference">
         <p class="caption">
           Current video reference · 01:05
         </p>
@@ -357,7 +342,7 @@
             Proposed visual
           </b>
           <br>
-          Show a candidate term beside evidence from a real community source.
+          Show an AI-suggested term beside its use in a non-AI community source. Add: Real? Accurate? Useful?
         </p>
 
         <p class="script">
@@ -365,7 +350,7 @@
             Proposed narration
           </b>
           <br>
-          They then verify those suggestions in non-AI sources. Students practice recognizing weak suggestions, checking evidence, and deciding what is actually useful for their project.
+          Students then check every suggested term in a non-AI source. They learn to distinguish generated possibilities from evidence and decide whether a term is real, accurate, and useful to their inquiry.
         </p>
 
         <p>
@@ -373,7 +358,7 @@
             Revision purpose
           </b>
           <br>
-          Connect AI use to critical evaluation, rather than accepting generated answers.
+          Connect AI use to critical thinking and responsibility for evidence.
         </p>
 
       </article>
@@ -386,7 +371,7 @@
         <h2>
           06 · 01:15–01:30
         </h2>
-        <img src="assets/frame-080.jpg" alt="Current video reference">
+        <img src="images/frame-080.jpg" alt="Current video reference">
         <p class="caption">
           Current video reference · 01:20
         </p>
@@ -404,7 +389,7 @@
             Proposed visual
           </b>
           <br>
-          Highlight Non-AI Research. Add: Search → Notice → Connect.
+          Highlight Non-AI Research. Add: Start broad → Follow conversations → Notice patterns.
         </p>
 
         <p class="script">
@@ -412,7 +397,7 @@
             Proposed narration
           </b>
           <br>
-          On the non-AI path, students search where the community communicates. They practice finding sources, noticing patterns, and discovering specialized language in context, without using AI.
+          On the non-AI path, students begin broadly, follow links, and notice recurring authors, organizations, and specialized language. They build search skills and learn how to find their way into a community’s conversation.
         </p>
 
         <p>
@@ -420,7 +405,7 @@
             Revision purpose
           </b>
           <br>
-          Give the non-AI route an affirmative learning purpose.
+          Make the value of direct discovery explicit.
         </p>
 
       </article>
@@ -433,7 +418,7 @@
         <h2>
           07 · 01:30–01:45
         </h2>
-        <img src="assets/frame-090.jpg" alt="Current video reference">
+        <img src="images/frame-090.jpg" alt="Current video reference">
         <p class="caption">
           Current video reference · 01:30
         </p>
@@ -451,7 +436,7 @@
             Proposed visual
           </b>
           <br>
-          Zoom into common deliverables: community paragraph, 10–15 terms, updated question.
+          Show the three common deliverables and five-point rubric; label: Same outcomes. Same points.
         </p>
 
         <p class="script">
@@ -459,7 +444,7 @@
             Proposed narration
           </b>
           <br>
-          Everyone submits a community paragraph, ten to fifteen terms defined in their own words, and an updated research question. The same rubric evaluates the learning across both paths.
+          Everyone submits a community paragraph, ten to fifteen useful terms defined in their own words, and an updated question. Both paths earn the same five points under the same rubric.
         </p>
 
         <p>
@@ -467,7 +452,7 @@
             Revision purpose
           </b>
           <br>
-          Show what the instructor can assess consistently.
+          Show the common basis for assessing learning.
         </p>
 
       </article>
@@ -480,7 +465,7 @@
         <h2>
           08 · 01:45–02:00
         </h2>
-        <img src="assets/frame-110.jpg" alt="Current video reference">
+        <img src="images/frame-110.jpg" alt="Current video reference">
         <p class="caption">
           Current video reference · 01:50
         </p>
@@ -498,7 +483,7 @@
             Proposed visual
           </b>
           <br>
-          Keep the paired pages; align the common first step, Revisit Your Direction.
+          Align the common starting step on both pages. Highlight: Topic • Artifact • Question.
         </p>
 
         <p class="script">
@@ -506,7 +491,7 @@
             Proposed narration
           </b>
           <br>
-          Both paths begin with the student’s topic, artifact, and question. The choice concerns how to investigate; students still make the decisions and explain what they learn.
+          Both paths begin with the student’s topic, artifact, and question. Students can change direction now and identify that change in the submission. They choose both the project’s direction and the research route.
         </p>
 
         <p>
@@ -514,7 +499,7 @@
             Revision purpose
           </b>
           <br>
-          Make agency concrete and retain the shared starting point.
+          Explain student agency through concrete choices already allowed by the assignments.
         </p>
 
       </article>
@@ -527,7 +512,7 @@
         <h2>
           09 · 02:00–02:15
         </h2>
-        <img src="assets/frame-125.jpg" alt="Current video reference">
+        <img src="images/frame-125.jpg" alt="Current video reference">
         <p class="caption">
           Current video reference · 02:05
         </p>
@@ -545,7 +530,7 @@
             Proposed visual
           </b>
           <br>
-          Use a readable two-column process diagram instead of scrolling full pages.
+          Replace scrolling with a documentation comparison. AI: term + own definition + AI tool + verification source. Non-AI: term + own definition + discovery source.
         </p>
 
         <p class="script">
@@ -553,7 +538,7 @@
             Proposed narration
           </b>
           <br>
-          One student searches community sources to find terms. Another asks AI for candidates, then checks them against community sources. Both must connect the vocabulary to their inquiry.
+          Documentation differs. AI-path students name the tool and the non-AI source that verifies each term. Non-AI students document where they found each term; that source already provides evidence of community use.
         </p>
 
         <p>
@@ -561,7 +546,7 @@
             Revision purpose
           </b>
           <br>
-          Give a concrete comparison of the work students do.
+          Explain the documentation difference without adding a verification requirement to the non-AI path.
         </p>
 
       </article>
@@ -574,7 +559,7 @@
         <h2>
           10 · 02:15–02:30
         </h2>
-        <img src="assets/frame-135.jpg" alt="Current video reference">
+        <img src="images/frame-135.jpg" alt="Current video reference">
         <p class="caption">
           Current video reference · 02:15
         </p>
@@ -592,7 +577,7 @@
             Proposed visual
           </b>
           <br>
-          Highlight the verification rule and one short evidence example.
+          Show three short rules: Verify every AI term. Replace unsupported terms. Write your own definitions.
         </p>
 
         <p class="script">
@@ -600,7 +585,7 @@
             Proposed narration
           </b>
           <br>
-          On the AI path, another AI answer does not count as verification. If a term cannot be supported, replace it. Students explain the verified terms in their own words.
+          Another AI answer does not count as verification. Replace unsupported terms. On both paths, students explain meanings themselves; on the AI path, they must not ask AI to rewrite the definitions.
         </p>
 
         <p>
@@ -608,7 +593,7 @@
             Revision purpose
           </b>
           <br>
-          Keep the AI boundary brief and actionable.
+          Replace a long AI statement with specific, actionable directions.
         </p>
 
       </article>
@@ -621,7 +606,7 @@
         <h2>
           11 · 02:30–02:45
         </h2>
-        <img src="assets/frame-155.jpg" alt="Current video reference">
+        <img src="images/frame-155.jpg" alt="Current video reference">
         <p class="caption">
           Current video reference · 02:35
         </p>
@@ -639,7 +624,7 @@
             Proposed visual
           </b>
           <br>
-          Show a broad question becoming more focused; highlight the reason for the change.
+          Show the ballet example: shoe terms → useful for injury research? Less useful for workplace hierarchy? Then show a more focused question.
         </p>
 
         <p class="script">
@@ -647,7 +632,7 @@
             Proposed narration
           </b>
           <br>
-          The vocabulary should help students ask a better question, not just decorate one. Both paths ask students to show how their understanding has developed through the research.
+          A real term is not automatically useful. Ballet shoe terms might help an inquiry about injury, but add little to one about workplace hierarchy. Choose vocabulary that helps the inquiry, then refine the question.
         </p>
 
         <p>
@@ -655,7 +640,7 @@
             Revision purpose
           </b>
           <br>
-          Tie both routes to the assignment’s learning goal.
+          Use the original assignments’ example to make relevance and question development concrete.
         </p>
 
       </article>
@@ -668,7 +653,7 @@
         <h2>
           12 · 02:45–03:00
         </h2>
-        <img src="assets/frame-175.jpg" alt="Current video reference">
+        <img src="images/frame-175.jpg" alt="Current video reference">
         <p class="caption">
           Current video reference · 02:55
         </p>
@@ -686,7 +671,7 @@
             Proposed visual
           </b>
           <br>
-          Replace most navigation with a card: Evidence of learning.
+          Replace navigation with an outcome card: Communication • Critical thinking • Personal responsibility. Pair each with rubric evidence.
         </p>
 
         <p class="script">
@@ -694,7 +679,7 @@
             Proposed narration
           </b>
           <br>
-          For instructors, the common submission makes both routes assessable: Can students identify a community, explain its language, support their choices, and refine a question?
+          For instructors, common evidence connects both routes to course goals: communication through definitions, critical thinking through evidence and a refined question, and personal responsibility through documentation. The rubric assesses those goals across both paths.
         </p>
 
         <p>
@@ -702,7 +687,7 @@
             Revision purpose
           </b>
           <br>
-          Answer JMS’s instructor-benefit question explicitly.
+          Answer JMS’s instructor-benefit question with explicit links to the supplied learning outcomes.
         </p>
 
       </article>
@@ -715,7 +700,7 @@
         <h2>
           13 · 03:00–03:15
         </h2>
-        <img src="assets/frame-185.jpg" alt="Current video reference">
+        <img src="images/frame-185.jpg" alt="Current video reference">
         <p class="caption">
           Current video reference · 03:05
         </p>
@@ -733,7 +718,7 @@
             Proposed visual
           </b>
           <br>
-          Show rubric briefly. Add a concise instruction card with four short rules.
+          Show a closing checklist: Choose a path. Explain the community. Document 10–15 terms. Refine the question. Submit PDF.
         </p>
 
         <p class="script">
@@ -741,7 +726,7 @@
             Proposed narration
           </b>
           <br>
-          Keep the instructions clear: choose one path, follow its steps, document your sources, and submit the common requirements. On the AI path, also record the tool and verify its suggestions.
+          Keep the directions brief: choose a path, explain the community, define and document ten to fifteen useful terms, and refine the question. Submit a PDF. Specialized language belongs in the question only when it helps.
         </p>
 
         <p>
@@ -749,7 +734,7 @@
             Revision purpose
           </b>
           <br>
-          Favor a short checklist over a longer AI statement.
+          Keep the required actions visible and concise, without implying that more words create clarity.
         </p>
 
       </article>
@@ -762,7 +747,7 @@
         <h2>
           14 · 03:15–03:20.1
         </h2>
-        <img src="assets/frame-195.jpg" alt="Current video reference">
+        <img src="images/frame-195.jpg" alt="Current video reference">
         <p class="caption">
           Current video reference · 03:15
         </p>
@@ -803,61 +788,7 @@
 
     </main>
 
+    <!-- REVIEW BEHAVIOR: stored locally, with downloadable feedback -->
+    <script src="review.js" defer></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
